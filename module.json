@@ -1,8 +1,8 @@
 {
-    "id": "tgn-integration",
+    "id": "tgn-foundry-integration",
     "title": "The Goblin's Notebook Integration",
     "description": "Import object data from The Goblin's Notebook and display dice rolls results.",
-    "version": "alpha_1.0",
+    "version": "poc-1.0",
     "authors": [
         {
             "name": "The Goblin",
