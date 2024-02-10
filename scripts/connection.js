@@ -9,6 +9,28 @@ function getQueryStringByName(name, url = window.location.href) {
 function logMessage(msg) {
     logframe.innerHTML += "<br />" + msg;
 }
+function emitChatMessage(userId, chatMessage) {
+    logMessage("Sending ChatMessage");
+    socket.emit(
+        "modifyDocument",
+        {
+            "type":
+                "ChatMessage",
+                "action":
+                    "create",
+                    "data":[{
+                        "user":userId,
+                        "content":chatMessage,
+                        "type":1
+                    }]
+        },
+        response => {
+            logMessage("Got modifyDocument response");
+            socket.close();
+            window.close();
+        }
+    );
+}
 
 //let sessionid = readCookie("tgn-session");
 let sessionid = readCookie("session");
@@ -22,13 +44,14 @@ let socket = io.connect(window.location.origin, {
 
 let logframe = document.querySelector("div#log");
 let ts = new Date(Date.now()).toUTCString();
-let userId = "";
 let response = null;
+let user = getQueryStringByName("user");
 let label = getQueryStringByName("label");
 let dice = getQueryStringByName("dice");
 let diceresult = getQueryStringByName("diceresult");
 let result = getQueryStringByName("result");
 
+logMessage("User: " + user);
 logMessage("Label: " + label);
 logMessage("Dice: " + dice);
 logMessage("Dice Result: " + diceresult);
@@ -60,33 +83,21 @@ let msg = `
 </ol>
 */
 
-logMessage("Sending world message");
-socket.emit(
-    "world",
-    response => {
-        logMessage("got world response");
-        userId = response.userId;
-        socket.emit(
-            "modifyDocument",
-            {
-                "type":
-                    "ChatMessage",
-                    "action":
-                        "create",
-                        "data":[{
-                            "user":userId,
-                            "content":msg,
-                            "type":1
-                        }]
-            },
-            response => {
-                logMessage("Got modifyDocument response");
-                socket.close();
-                window.close();
-            }
-        );
-    }
-);
+if (user != "" && user != null) {
+    emitChatMessage(user, msg);
+} else {
+    logMessage("Sending world message");
+    socket.emit(
+        "world",
+        response => {
+            logMessage("got world response");
+            user = response.userId;
+            emitChatMessage(user, msg);
+        }
+    );
+}
+
+
         
 
 /*
