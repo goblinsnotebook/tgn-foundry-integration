@@ -50,12 +50,17 @@ let label = getQueryStringByName("label");
 let dice = getQueryStringByName("dice");
 let diceresult = getQueryStringByName("diceresult");
 let result = getQueryStringByName("result");
+let crit = getQueryStringByName("crit");
+
+if (crit == "s") { crit = " success"; }
+if (crit == "f") { crit = " failure"; }
 
 logMessage("User: " + user);
 logMessage("Label: " + label);
 logMessage("Dice: " + dice);
 logMessage("Dice Result: " + diceresult);
 logMessage("Result: " + result);
+logMessage("Crit: " + crit);
 
 let msg = `
     <div class="flavor-text">${label}</div>
@@ -72,7 +77,7 @@ let msg = `
                     </div>
                 </section>
             </div>
-            <h4 class="dice-total">${result}</h4>
+            <h4 class="dice-total${crit}">${result}</h4>
             <div>Sent from The Goblin's Notebook</div>
         </div>
     </div>`;
