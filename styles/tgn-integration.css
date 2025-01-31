@@ -16,3 +16,31 @@ span.tgn-dice-roll.drop {
 span.tgn-dice-roll.keep {
     font-weight: bold;
 }
+span.tgn.part-formula {
+    font-size: 1.2em;
+}
+div.footer {
+    font-size: 0.8em;
+    text-align: right;
+    margin-top: 0.2em;
+}
+li.chat-message:has(div.tgn.dice-roll) > * {
+    z-index: 2;
+}
+li.chat-message:has(div.tgn.dice-roll) div.flavor-text {
+    margin-bottom: 0.2em;
+}
+li.chat-message:has(div.tgn.dice-roll)::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: 134%;
+    background-repeat: no-repeat;
+    background-position: center top 2.5em;
+    background-image: url(goblin-greyscale-min.svg);
+    opacity: 0.1;
+    z-index: 1;
+}
