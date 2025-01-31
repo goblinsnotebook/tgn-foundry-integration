@@ -1,8 +1,8 @@
 {
     "id": "tgn-foundry-integration",
     "title": "The Goblin's Notebook Integration",
-    "description": "Import object data from The Goblin's Notebook and display dice rolls results.",
-    "version": "poc-1.0",
+    "description": "Show dice roll results from The Goblin's Notebook as Foundry dice rolls.",
+    "version": "poc-12.331.1",
     "authors": [
         {
             "name": "The Goblin",
@@ -23,11 +23,11 @@
     "styles": [
         "styles/tgn-integration.css"
     ],
-    "url": "https://github.com/goblinsnotebook/tgn-foundry-integration/tree/poc",
-    "manifest": "https://github.com/goblinsnotebook/tgn-foundry-integration/releases/download/poc-0.1/module.json",
-    "download": "https://github.com/goblinsnotebook/tgn-foundry-integration/releases/download/poc-0.1/module.zip",
+    "url": "https://github.com/goblinsnotebook/tgn-foundry-integration/tree/v12",
+    "manifest": "https://github.com/goblinsnotebook/tgn-foundry-integration/releases/download/poc-12.331.1/module.json",
+    "download": "https://github.com/goblinsnotebook/tgn-foundry-integration/releases/download/poc-13.331.1/module.zip",
     "compatibility": {
-        "minimum": "10",
-        "verified": "10"
+        "minimum": "12",
+        "verified": "12"
     }
 }
