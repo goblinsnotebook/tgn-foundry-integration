@@ -1,0 +1,18 @@
+span.dice-log-object-name {
+    font-weight: bold;
+}
+
+span.tgn-dice-roll.min {
+    color: #890900;
+}
+span.tgn-dice-roll.max,
+span.tgn-dice-roll.keep {
+    color: #3F963C;
+}
+span.tgn-dice-roll.drop {
+    color: #777;
+    text-decoration: line-through;
+}
+span.tgn-dice-roll.keep {
+    font-weight: bold;
+}

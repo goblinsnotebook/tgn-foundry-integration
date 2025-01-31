@@ -1,0 +1,33 @@
+{
+    "id": "tgn-foundry-integration",
+    "title": "The Goblin's Notebook Integration",
+    "description": "Import object data from The Goblin's Notebook and display dice rolls results.",
+    "version": "poc-1.0",
+    "authors": [
+        {
+            "name": "The Goblin",
+            "discord": "GoblinsNotebook",
+            "flags": {
+                "github": "goblinsnotebook",
+                "ko-fi": "goblinsnotebook"
+            }
+        }
+    ],
+    "scripts": [
+        "scripts/cookie.js",
+        "scripts/startup.js"
+    ],
+    "esmodules": [
+        
+    ],
+    "styles": [
+        "styles/tgn-integration.css"
+    ],
+    "url": "https://github.com/goblinsnotebook/tgn-foundry-integration/tree/poc",
+    "manifest": "https://github.com/goblinsnotebook/tgn-foundry-integration/releases/download/poc-0.1/module.json",
+    "download": "https://github.com/goblinsnotebook/tgn-foundry-integration/releases/download/poc-0.1/module.zip",
+    "compatibility": {
+        "minimum": "10",
+        "verified": "10"
+    }
+}
