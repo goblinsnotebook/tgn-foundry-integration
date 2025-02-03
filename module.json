@@ -14,11 +14,8 @@
         }
     ],
     "scripts": [
-        "scripts/cookie.js",
-        "scripts/startup.js"
     ],
     "esmodules": [
-        
     ],
     "styles": [
         "styles/tgn-integration.css"
