@@ -5,16 +5,12 @@ span.dice-log-object-name {
 span.tgn-dice-roll.min {
     color: #890900;
 }
-span.tgn-dice-roll.max,
-span.tgn-dice-roll.keep {
+span.tgn-dice-roll.max {
     color: #3F963C;
 }
 span.tgn-dice-roll.drop {
     color: #777;
     text-decoration: line-through;
-}
-span.tgn-dice-roll.keep {
-    font-weight: bold;
 }
 span.tgn.part-formula {
     font-size: 1.2em;
